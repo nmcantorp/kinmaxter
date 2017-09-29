@@ -1,13 +1,186 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>{% block title %}Kinmaxter Cia Ltda{% endblock %}</title>
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}">
+
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/font-awesome.min.css') }}">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/animate.css') }}">
+        <!-- Owl-Carousel -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/owl.carousel.css') }}" >
+        <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/owl.theme.css') }}" >
+        <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/owl.transitions.css') }}" >
+        <!-- Materialize CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/material.css') }}">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/responsive.css') }}">
+        <!-- Colors CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/color/blue.css') }}" title="blue">
+        <!-- Custom Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <!-- Modernizer js -->
+
+        <script src="{{ asset('plugins/js/modernizr.custom.js') }}"></script>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body>
+    <body class="index">
+        <!-- Start Off=Canvas Navigation Section -->
+        <div class="menu-wrap">
+            <nav class="menu">
+                <div class="icon-list">
+                    <a href="#home" class="logo page-scroll waves-effect">Inicio</a>
+                    <a href="#about-us" class="page-scroll waves-effect"><i class="fa fa-fw fa-user"></i><span>Nosotros</span></a>
+                    {#<a href="#portfolio" class="page-scroll waves-effect"><i class="fa fa-fw fa-bell-o"></i><span>Portfolio</span></a>#}
+                    <a href="#service" class="page-scroll waves-effect"><i class="fa fa-fw fa-bar-chart-o"></i><span>Servicios</span></a>
+                    {#<a href="#team" class="page-scroll waves-effect"><i class="fa fa-fw fa-users"></i><span>Our Team</span></a>
+                    <a href="#latest-news" class="page-scroll waves-effect"><i class="fa fa-fw fa-mortar-board"></i><span>Latest News</span></a>#}
+                    <a href="#client" class="page-scroll waves-effect"><i class="fa fa-fw fa-comment-o"></i><span>Clientes</span></a>
+                   {# <a href="#contact" class="page-scroll waves-effect"><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a>#}
+                </div>
+            </nav>
+            <button class="close-button" id="close-button">Close Menu</button>
+        </div>
+        <button class="menu-button waves-effect" id="open-button">Open Menu</button>
+        <!-- End Off-Canvas Navigation Section -->
+
+
+        <!-- ***************************************************************** -->
+        <!-- Start Header Section -->
+        <!-- ***************************************************************** -->
+        <section class="header" id="home">
+            <div class="container" style="background: rgba(0,0,0,0.5);width: 100% !important;">
+                <div class="intro-text">
+                    <h1>Kinmaxter<span> Cia Ltda</span></h1>
+                    <p>Servicios generales propiedad horizontal.</p>
+                    <a href="#service" class="page-scroll waves-effect btn btn-primary">Nuestros Servicios</a>
+                </div>
+            </div>
+        </section>
+        <!-- End Header Section -->
+
         {% block body %}{% endblock %}
+
+        <!-- Start Map Section -->
+        <div class="google-map">
+            <div id="map"></div>
+            <div class="contact-info waves-effect">
+                <h4>Contact info</h4>
+                <ul>
+                    <li><strong>Dirección :</strong>Av Cra 15 # 119 – 11 Edif. EPCO CENTRO Ofic. 308</li>
+                    <!-- <li><strong>E-mail :</strong> your-email@mail.com</li> -->
+                    <li><strong>Phone :</strong> 2148906</li>
+                    <!-- <li><strong>Mobile :</strong> +8801-45565378</li> -->
+                    <li><strong>Web :</strong> kinmaxter.com</li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Map Section -->
+
+
+
+        <!-- Start Footer Section -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <div class="col-md-6 col-xs-6">
+                            <span class="copyright"> &copy; Navigator 2015. Designed by <a href="http://themefisher.com" target="_blank">Themefisher</a></span>
+                        </div>
+                        <div class="col-md-6 col-xs-6">
+                            <span class="copyright"> &copy; Developed by <br><a href="http://sialen.com" target="_blank">Sialen Ingenieros</a></span>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        {#<div class="footer-social text-center">
+                            <ul>
+                                <li class="waves-effect"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li class="waves-effect"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li class="waves-effect"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li class="waves-effect"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li class="waves-effect"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+                        </div>#}
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        {#<div class="footer-link">
+                            <ul class="pull-right">
+                                <li><a href="#">getbootstrap</a>
+                                </li>
+                                <li><a href="#">FontAwesome</a>
+                                </li>
+                            </ul>
+                        </div>#}
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Section -->
+
+
+        <!-- jQuery Version 2.1.3 -->
+        <script src="{{ asset('plugins/js/jquery-2.1.3.min.js') }}"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="{{ asset('plugins/js/jquery.easing.1.3.js') }}"></script>
+        <script src="{{ asset('plugins/js/classie.js') }}"></script>
+        <script src="{{ asset('plugins/js/count-to.js') }}"></script>
+        <script src="{{ asset('plugins/js/jquery.appear.js') }}"></script>
+        <script src="{{ asset('plugins/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('plugins/js/jquery.fitvids.js') }}"></script>
+
+        <!-- Contact Form JavaScript -->
+        <script src="{{ asset('plugins/js/jqBootstrapValidation.js') }}"></script>
+        <script src="{{ asset('plugins/js/contact_me.js') }}"></script>
+
+        <!-- Materialize js -->
+        <script src="{{ asset('plugins/js/material.js') }}"></script>
+        <script src="{{ asset('plugins/js/waypoints.min.js') }}"></script>
+
+        <!-- Google Map -->
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <!-- <script src="assets/js/google-map-init.js"></script> -->
+
+        <!-- Custom JavaScript -->
+        <script src="{{ asset('plugins/js/script.js') }}"></script>
+
+        <script>
+            function initMap() {
+                var uluru = {lat: 4.6991165, lng: -74.0431196};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 18,
+                    center: uluru
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                });
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaNLBYXhyOqjPOlu-5L2lxIw63xl5p6Ew&callback=initMap">
+        </script>
+
         {% block javascripts %}{% endblock %}
+
     </body>
 </html>
